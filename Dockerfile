@@ -1,7 +1,7 @@
 FROM jenkins:2.60.3
 
-RUN apt-get update 
 RUN apt-get install -y apt-transport-https 
+RUN apt-get update 
 RUN apt-get install -y make 
 RUN rm -rf /var/lib/apt/lists/*
 # Downloading gcloud package

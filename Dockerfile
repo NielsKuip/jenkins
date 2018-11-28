@@ -1,6 +1,6 @@
 FROM jenkins:2.60.3
 
-RUN sudo mkdir /var/lib/apt/lists/partial
+
 RUN apt-get update || apt-get update
 RUN apt-get install -y apt-transport-https 
 RUN apt-get install -y make 

@@ -4,6 +4,7 @@ USER root
 RUN apt-get update || apt-get update
 RUN apt-get install -y apt-transport-https 
 RUN apt-get install -y make 
+RUN apt-get install golang-1.10-go
 RUN rm -rf /var/lib/apt/lists/*
 # Downloading gcloud package
 RUN curl https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz > /tmp/google-cloud-sdk.tar.gz
@@ -17,8 +18,6 @@ RUN mkdir -p /usr/local/gcloud \
 RUN curl -L https://dl.k8s.io/v1.10.6/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl
 # Adding the package path to local
 
-RUN add-apt-repository ppa:gophers/archive
-RUN sudo apt-get update
-RUN apt-get install golang-1.10-go
+
 
 ENV PATH $PATH:/usr/local/gcloud/google-cloud-sdk/bin

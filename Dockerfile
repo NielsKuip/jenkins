@@ -14,7 +14,7 @@ RUN mkdir -p /usr/local/gcloud \
   && /usr/local/gcloud/google-cloud-sdk/install.sh \
   && rm -f /tmp/google-cloud-sdk.tar.gz
 
-RUN gcloud components install kubectl
+RUN curl -L https://dl.k8s.io/v1.10.6/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl
 # Adding the package path to local
 ENV PATH $PATH:/usr/local/gcloud/google-cloud-sdk/bin
 

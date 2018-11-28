@@ -5,6 +5,7 @@ RUN apt-get update
 RUN apt-get install -y apt-transport-https 
 RUN apt-get install -y make 
 RUN apt-get install -y apt-utils
+RUN apt-get install -y golang
 
 RUN rm -rf /var/lib/apt/lists/*
 # Downloading gcloud package

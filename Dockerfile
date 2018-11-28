@@ -1,5 +1,11 @@
 FROM jenkins:2.60.3
-FROM golang:alpine
+
+FROM golang:latest 
+RUN mkdir /app 
+ADD . /app/ 
+WORKDIR /app 
+RUN go build -o main . 
+CMD ["/app/main"]
 
 USER root
 RUN apt-get update || apt-get update

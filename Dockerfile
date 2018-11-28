@@ -4,9 +4,10 @@ USER root
 RUN apt-get update
 RUN apt-get install -y apt-transport-https 
 RUN apt-get install -y make 
+RUN apt-get install -y apt-utils
 RUN add-apt-repository ppa:longsleep/golang-backports
 RUN apt-get update
-RUN apt-get install golang-go
+RUN apt-get install -y golang-go
 RUN rm -rf /var/lib/apt/lists/*
 # Downloading gcloud package
 RUN curl https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz > /tmp/google-cloud-sdk.tar.gz

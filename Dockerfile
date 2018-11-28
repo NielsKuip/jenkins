@@ -14,6 +14,7 @@ RUN mkdir -p /usr/local/gcloud \
   && /usr/local/gcloud/google-cloud-sdk/install.sh \
   && rm -f /tmp/google-cloud-sdk.tar.gz
 
+
 # Adding the package path to local
 ENV PATH $PATH:/usr/local/gcloud/google-cloud-sdk/bin
 

@@ -1,7 +1,7 @@
 FROM jenkins:2.60.3
 
 USER root
-RUN apt-get update || apt-get update
+RUN apt-get update
 RUN apt-get install -y apt-transport-https 
 RUN apt-get install -y make 
 RUN add-apt-repository ppa:longsleep/golang-backports

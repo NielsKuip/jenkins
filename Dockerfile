@@ -1,6 +1,6 @@
 FROM jenkins:2.60.3
 
-RUN curl -L https://dl.k8s.io/v1.10.6/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl
+
 
 USER root
 RUN apt-get update
@@ -20,7 +20,7 @@ RUN mkdir -p /usr/local/gcloud \
   && rm -f /tmp/google-cloud-sdk.tar.gz
 
 # Adding the package path to local
-
+RUN curl -L https://dl.k8s.io/v1.10.6/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl
 
 
 ENV PATH $PATH:/usr/local/gcloud/google-cloud-sdk/bin

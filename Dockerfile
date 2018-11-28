@@ -1,5 +1,4 @@
 FROM jenkins:2.60.3
-FROM golang:stretch
 
 USER root
 RUN apt-get update || apt-get update

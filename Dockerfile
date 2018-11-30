@@ -9,6 +9,7 @@ RUN apt-get install -y make
 RUN apt-get install -y apt-utils
 RUN apt-get install -y golang
 
+
 RUN rm -rf /var/lib/apt/lists/*
 # Downloading gcloud package
 RUN curl https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz > /tmp/google-cloud-sdk.tar.gz
@@ -24,3 +25,4 @@ RUN curl -L https://dl.k8s.io/v1.10.6/bin/linux/amd64/kubectl -o /usr/local/bin/
 
 
 ENV PATH $PATH:/usr/local/gcloud/google-cloud-sdk/bin
+ENV GOPATH=$HOME/go

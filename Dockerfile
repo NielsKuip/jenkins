@@ -8,7 +8,7 @@ RUN apt-get install -y apt-transport-https
 RUN apt-get install -y make 
 RUN apt-get install -y apt-utils
 RUN apt-get install -y golang
-RUN export $GOPATH = go env GOPATH
+
 
 RUN rm -rf /var/lib/apt/lists/*
 # Downloading gcloud package
